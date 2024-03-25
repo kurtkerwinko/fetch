@@ -1,4 +1,4 @@
-#!/bin/python
+#!/bin/python3
 
 import argparse
 import datetime
@@ -118,6 +118,7 @@ def fetch_url(url, metadata, download_js):
         save_assets(soup, root_url, tag, attr, save_dir)
 
     save_data(filepath, str(soup).encode())
+    print(f"Saved {url} to the {save_dir} directory")
 
     if metadata:
         if last_modified:
