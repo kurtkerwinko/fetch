@@ -25,3 +25,10 @@ options:
     - `docker run github.com/kurtkerwinko/fetch:latest --metadata https://www.google.com`
 3. Alternatively, bind current directory with the container to skip copying the save directory from the Docker container to the host
     - `docker run --rm -v .:/root github.com/kurtkerwinko/fetch:latest --metadata https://www.google.com`
+
+## TODO
+1. Save assets from CSS files [`url(...)`]
+    - Use regex in CSS files to look for and download/rewrite `url(...)` function calls
+2. Check if there are other content types to consider when downloading assets
+3. Allow URL inputs that are missing http/https (`python fetch.py www.google.com`)
+4. Debug issue where some images aren't shown when opening an HTML page locally
